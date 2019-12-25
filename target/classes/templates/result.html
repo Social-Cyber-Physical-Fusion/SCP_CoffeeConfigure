@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Coffee Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <h1>提交成功！</h1>
+
+    <p th:text="'浓度(0-淡咖啡，1-中咖啡，2-重咖啡):' + ${coffee.level}" />
+    <p th:text="'咖啡模式(0-咖啡粉，1-咖啡豆): ' + ${coffee.mode}" />
+    <p th:text="'咖啡数量（2-12杯）:' + ${coffee.num}" />
+    <a href="/coffee">Submit another message</a>
+</body>
+</html>

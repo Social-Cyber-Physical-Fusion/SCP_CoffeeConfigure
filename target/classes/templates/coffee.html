@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Coffee Started: Handling Form Submission</title>
+    <meta name="viewport" http-equiv="Content-Type" content="text/html; charset=UTF-8; width=device-width, initial-scale=1" />
+
+    <link th:href="@{/Bootstrap/bootstrap/css/bootstrap.min.css}" rel="stylesheet" />
+    <link th:href="@{/Bootstrap/bootstrapvalidator/css/bootstrapValidator.min.css}" rel="stylesheet" />
+    <link th:href="@{/Bootstrap/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css}" rel="stylesheet" />
+    <link th:href="@{/Bootstrap/bootstrap-select/css/bootstrap-select.min.css}" rel="stylesheet" />
+    <link th:href="@{/Bootstrap/bootstrap-toastr/css/toastr.min.css}" rel="stylesheet" />
+
+
+    <script th:src="@{/js/jquery-3.2.1.min.js}"></script>
+    <script th:src="@{/Bootstrap/bootstrap/js/bootstrap.min.js}"></script>
+    <script th:src="@{/Bootstrap/bootstrapvalidator/js/bootstrapValidator.min.js}"></script>
+    <script th:src="@{/Bootstrap/bootstrapvalidator/js/language/zh_CN.js}"></script>
+    <script th:src="@{/Bootstrap/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js}"></script>
+    <script th:src="@{/Bootstrap/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js}"></script>
+    <script th:src="@{/Bootstrap/bootstrap-select/js/bootstrap-select.min.js}"></script>
+    <script th:src="@{/Bootstrap/bootstrap-select/js/i18n/defaults-zh_CN.min.js}"></script>
+    <script th:src="@{/Bootstrap/bootstrap-toastr/js/toastr.min.js}"></script>
+    </head>
+<body>
+<h1>选择咖啡种类</h1>
+<form action="#" th:action="@{/coffee}" th:object="${coffee}" method="post">
+    <p>浓度:<select th:field="*{level}" th:switch="*{level}" name = "level">
+                <option value="">请选择咖啡浓度</option>
+                <option  th:selected="selected" th:value="0">淡咖啡</option>
+                <option  th:selected="selected" th:value="1">中咖啡</option>
+                <option  th:selected="selected" th:value="2">重咖啡</option>
+            </select></p>
+    <p>制作类型: <select th:field="*{mode}" th:switch="*{mode}" name = "mode">
+        <option value="">请选择咖啡制作方式</option>
+        <option  th:selected="selected" th:value="1">咖啡豆</option>
+        <option  th:selected="selected" th:value="0">咖啡粉</option>
+    </select></p>
+    <p>咖啡杯数: <select th:field="*{num}" th:switch="*{num}" name = "num">
+        <option value="">请选择咖啡杯数</option>
+        <option  th:selected="selected" th:value="2">2杯</option>
+        <option  th:selected="selected" th:value="4">4杯</option>
+        <option  th:selected="selected" th:value="6">6杯</option>
+        <option  th:selected="selected" th:value="8">8杯</option>
+        <option  th:selected="selected" th:value="10">10杯</option>
+        <option  th:selected="selected" th:value="12">12杯</option>
+    </select></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</html>
