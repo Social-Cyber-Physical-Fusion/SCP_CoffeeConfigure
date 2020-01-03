@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c16d9d5f-f64c-4d35-bd24-6cda9d3b90b1" name="Default" comment="修改下单应用">
+    <list default="true" id="c16d9d5f-f64c-4d35-bd24-6cda9d3b90b1" name="Default" comment="修改下单应用IP地址，补充说明">
+      <change afterPath="$PROJECT_DIR$/target/CoffeeConfigure-1.0-SNAPSHOT/WEB-INF/lib/javax.servlet-api-3.1.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/fudan/selab/controller/GetCoffeeLink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/fudan/selab/controller/GetCoffeeLink.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/fudan/selab/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/fudan/selab/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CoffeeConfigure-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/CoffeeConfigure-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CoffeeConfigure-1.0-SNAPSHOT.war.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/CoffeeConfigure-1.0-SNAPSHOT.war.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CoffeeConfigure-1.0-SNAPSHOT/WEB-INF/classes/edu/fudan/selab/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CoffeeConfigure-1.0-SNAPSHOT/WEB-INF/classes/edu/fudan/selab/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CoffeeConfigure-1.0-SNAPSHOT/WEB-INF/classes/edu/fudan/selab/controller/GetCoffeeLink.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/CoffeeConfigure-1.0-SNAPSHOT/WEB-INF/classes/edu/fudan/selab/controller/GetCoffeeLink.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/fudan/selab/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/fudan/selab/Test.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/fudan/selab/controller/GetCoffeeLink.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/fudan/selab/controller/GetCoffeeLink.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,11 +41,6 @@
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>spring.datasource</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -204,6 +207,7 @@
       <workItem from="1577972793473" duration="2264000" />
       <workItem from="1578015365517" duration="5088000" />
       <workItem from="1578026572939" duration="1267000" />
+      <workItem from="1578029697041" duration="2562000" />
     </task>
     <task id="LOCAL-00001" summary="修改下单应用">
       <created>1578024538980</created>
@@ -212,7 +216,21 @@
       <option name="project" value="LOCAL" />
       <updated>1578024538980</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="修改下单应用IP地址">
+      <created>1578029747028</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1578029747028</updated>
+    </task>
+    <task id="LOCAL-00003" summary="修改下单应用IP地址，补充说明">
+      <created>1578029843387</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1578029843387</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,7 +251,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="修改下单应用" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改下单应用" />
+    <MESSAGE value="修改下单应用IP地址" />
+    <MESSAGE value="修改下单应用IP地址，补充说明" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改下单应用IP地址，补充说明" />
   </component>
   <component name="masterDetails">
     <states>

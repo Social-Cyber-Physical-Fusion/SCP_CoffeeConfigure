@@ -4,13 +4,15 @@ import edu.fudan.selab.ontology.HttpRequestor;
 import net.sf.json.JSONObject;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 import java.sql.SQLOutput;
 import java.util.HashMap;
 import java.util.Map;
 
 @SpringBootApplication
-public class Test {
+public class Test extends SpringBootServletInitializer {
     public static void getServiceDescription() throws Exception {
         String serviceId = "Human_Machine_Thing-1_PerformGetCoffeeMachineStatus";
         String serviceDescriptionContoller = "http://192.168.1.148:5000/find_service_by_name/"+serviceId;
@@ -63,6 +65,12 @@ public class Test {
 
 
     }
+
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application){
+        return application.sources(Test.class);
+    }
+
     public static void main(String[] args) throws Exception {
         //getServiceDescription();
         SpringApplication.run(Test.class, args);
