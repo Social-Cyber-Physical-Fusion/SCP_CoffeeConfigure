@@ -20,7 +20,7 @@ jobs:
       uses: actions/upload-artifact@v1.0.0
       with:
         # Artifact name
-        name: CoffeeConfigure-1.0-SNAPSHOT.war
+        name: CoffeeConfigure.war
         # Directory containing files to upload
-        path: ./target/
+        path: ./target/CoffeeConfigure-1.0-SNAPSHOT.war
       
