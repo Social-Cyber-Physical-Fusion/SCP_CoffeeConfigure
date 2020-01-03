@@ -12,10 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
 
-import static edu.fudan.selab.globle.Constants.App_url;
-import static edu.fudan.selab.globle.Constants.local_url;
-import static edu.fudan.selab.globle.Constants.userId;
-import static edu.fudan.selab.globle.Constants.url_back;
+import static edu.fudan.selab.globle.Constants.*;
 
 @RestController
 public class GetCoffeeLink {
@@ -23,44 +20,99 @@ public class GetCoffeeLink {
     public String getLink(HttpServletRequest request) throws Exception{
         String link = local_url + "/coffee";
         //String node_id = "";
-        url_back = request.getParameter("callbackUrl");
-/*
-        if(!url_back.equals("")){
-            String temp = url_back.split("\\?")[1];
-            task_id = temp.split("=")[1];
-            //node_id = temp[1].split("=")[1];
-        }
+        //url_back = request.getParameter("callbackUrl");
 
-*/
-        String task_id = request.getParameter("processIdFromApp");
+        String taskId = request.getParameter("processIdFromApp");
+        workflow_instance_id = request.getParameter("workflow_instance_id");
+
         userId = request.getParameter("userId");
-        System.out.println(userId+"__________________________________________________________________");
-        String RedirectApp = App_url + "/task/saveTaskNodeMessage";
-        String notifyApp = App_url + "/user/sendMessageToMPOne";
+//        System.out.println(userId+"__________________________________________________________________");
+        String RedirectApp = SC_url + "/task/saveTaskNodeMessage";
+//        String notifyApp = App_url + "/user/sendMessageToMPOne";
 
         Map<String,String> map = new HashMap<String,String>();
-        //map.put("userId",userId);
-        map.put("taskId",task_id);
+        map.put("userId",userId);
+        map.put("taskId",taskId);
         map.put("nodeId","Human_Machine_Thing-1_PerformSelectCoffeeService");
         map.put("url",link);
         map.put("content","Please select the type of Coffee!");
 
-
-        Map<String,String> map1 = new HashMap<String,String>();
-        map1.put("userId",userId);
-        map1.put("content","You have a task of selecting coffee to continue!");
-        map1.put("url","www.baidu.com");
         new Thread() {
             public void run() {
                 try {
-                    String res = new HttpRequestor().doPost(RedirectApp,map);
-                    String res1 = new HttpRequestor().doPost(notifyApp,map1);
+                    String res = new HttpRequestor().doPost(RedirectApp, map);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                //String res1 = new HttpRequestor().doPost(notifyApp,map1);
             }
         }.start();
+
+//        Map<String,String> map1 = new HashMap<String,String>();
+//        map1.put("userId",userId);
+//        map1.put("content","You have a task of selecting coffee to continue!");
+//        map1.put("url","www.baidu.com");
+//        new Thread() {
+//            public void run() {
+//                try {
+//                    String res = new HttpRequestor().doPost(RedirectApp, map);
+//                    String res1 = new HttpRequestor().doPost(notifyApp, map1);
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
+//                //String res1 = new HttpRequestor().doPost(notifyApp,map1);
+//            }
+//        }.start();
+
+
+        return link;
+    }
+
+    @RequestMapping(value = "/getcoffeelink", method = RequestMethod.POST)
+    public String getLinkbyPOST(HttpServletRequest request) throws Exception{
+        String link = local_url + "/coffee";
+        //String node_id = "";
+        //url_back = request.getParameter("callbackUrl");
+
+        String taskId = request.getParameter("processIdFromApp");
+        workflow_instance_id = request.getParameter("workflow_instance_id");
+
+        userId = request.getParameter("userId");
+//        System.out.println(userId+"__________________________________________________________________");
+        String RedirectApp = SC_url + "/task/saveTaskNodeMessage";
+        String notifyApp = SC_url + "/user/sendMessageToMPOne";
+
+        Map<String,String> map = new HashMap<String,String>();
+        map.put("userId", userId);
+        map.put("taskId",taskId);
+        map.put("nodeId","Human_Machine_Thing-1_PerformSelectCoffeeService");
+        map.put("url",link);
+        map.put("content","Please");// select the type of Coffee!");
+
+        new Thread() {
+            public void run() {
+                try {
+                    String res = new HttpRequestor().doPost(notifyApp, map);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }.start();
+
+//        Map<String,String> map1 = new HashMap<String,String>();
+//        map1.put("userId",userId);
+//        map1.put("content","You have a task of selecting coffee to continue!");
+//        map1.put("url","www.baidu.com");
+//        new Thread() {
+//            public void run() {
+//                try {
+//                    String res = new HttpRequestor().doPost(RedirectApp, map);
+//                    String res1 = new HttpRequestor().doPost(notifyApp, map1);
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
+//                //String res1 = new HttpRequestor().doPost(notifyApp,map1);
+//            }
+//        }.start();
 
 
         return link;

@@ -14,9 +14,6 @@ import java.util.Iterator;
 import java.util.Map;
 
 public class HttpRequestor {
-
-
-
     private String charset = "utf-8";
     private Integer connectTimeout = null;
     private Integer socketTimeout = null;

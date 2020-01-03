@@ -27,7 +27,7 @@ public class CoffeeController {
         return "coffee";
     }
 
-    @PostMapping("/coffee")
+    @PostMapping("/old_coffee")
     public String coffeeSubmit(@ModelAttribute Coffee coffee) throws Exception {
         Map<String,String> map = new HashMap<String,String>();
         map.put("level",coffee.getLevel());
@@ -46,6 +46,37 @@ public class CoffeeController {
             }
         }.start();
         //String state = new HttpRequestor().doGet(url_back);
+        return "result";
+    }
+
+//        "url": "http://ordercoffee-service-proxy.default:8888/receive_result",
+//            "method": "POST",
+//            "headers": {
+//                "Content-Type": "application/x-www-form-urlencoded"
+//        },
+//        "data": {
+//            "workflow_instance_id": "workflow_1",
+//            "result": "{\"state\": \"Completed\", \"data\": \"111\"}"
+//        }
+    @PostMapping("/coffee")
+    public String newcoffeeSubmit(@ModelAttribute Coffee coffee) throws Exception {
+
+        String data = "{\\\"action\\\": \\\"start\\\", \\\"mode\\\": \\\""+coffee.getMode()+"\\\", \\\"level\\\": \\\""+coffee.getLevel()+"\\\", \\\"num\\\": \\\""+coffee.getNum()+"\\\"}";
+        String result = "{\"state\": \"Completed\", \"data\": \""+data+"\"}";
+
+        Map<String,String> map = new HashMap<String,String>();
+        map.put("workflow_instance_id", workflow_instance_id);
+        map.put("result", result);
+
+        new Thread() {
+            public void run() {
+                try {
+                    String state = new HttpRequestor().doPost(Proxy_url, map);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }.start();
         return "result";
     }
 }
