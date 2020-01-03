@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c16d9d5f-f64c-4d35-bd24-6cda9d3b90b1" name="Default" comment="添加Tomcat支持">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/fudan/selab/globle/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/fudan/selab/globle/Constants.java" afterDir="false" />
-    </list>
+    <list default="true" id="c16d9d5f-f64c-4d35-bd24-6cda9d3b90b1" name="Default" comment="部署到微服务容器" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +195,7 @@
       <workItem from="1577972793473" duration="2264000" />
       <workItem from="1578015365517" duration="5088000" />
       <workItem from="1578026572939" duration="1267000" />
-      <workItem from="1578029697041" duration="3785000" />
+      <workItem from="1578029697041" duration="4139000" />
     </task>
     <task id="LOCAL-00001" summary="修改下单应用">
       <created>1578024538980</created>
@@ -228,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578033533046</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="部署到微服务容器">
+      <created>1578034835249</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1578034835249</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,7 +256,8 @@
     <MESSAGE value="修改下单应用IP地址" />
     <MESSAGE value="修改下单应用IP地址，补充说明" />
     <MESSAGE value="添加Tomcat支持" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加Tomcat支持" />
+    <MESSAGE value="部署到微服务容器" />
+    <option name="LAST_COMMIT_MESSAGE" value="部署到微服务容器" />
   </component>
   <component name="masterDetails">
     <states>
