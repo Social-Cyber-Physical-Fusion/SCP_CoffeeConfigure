@@ -86,7 +86,7 @@ public class GetCoffeeLink {
         map.put("taskId",taskId);
         map.put("nodeId","Human_Machine_Thing-1_PerformSelectCoffeeService");
         map.put("url",link);
-        map.put("content","Please");// select the type of Coffee!");
+        map.put("content","Please select the type of Coffee!");
 
         new Thread() {
             public void run() {
